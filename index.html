@@ -1,0 +1,66 @@
+<!doctype>
+
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/detail.css">
+<link type="text/css" rel="stylesheet" href="css/graph.css">
+<link type="text/css" rel="stylesheet" href="css/lines.css">
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.uncompressed.js"></script>
+
+<script src="js/d3.v3.js"></script>
+<script src="js/rickshaw.js"></script>
+
+<style>
+
+body {
+   background-color: rgb(23, 23, 23);
+   margin-right: 80px;
+}
+
+#chart {
+	position: relative;
+	left: 40px;
+}
+
+#y_axis {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+}
+
+#footer {
+  background-color: rgb(23, 23, 23);
+  color: rgb(23, 23, 23);
+  position : absolute;
+  bottom : 0;
+  width: 100%;
+  height : 70px;
+  margin-top : 40px;
+}
+
+.rickshaw_graph .x_tick .title { color: white; font-size: 15px;}
+.rickshaw_graph .y_ticks .tick { color: white;}
+.rickshaw_graph .y_grid { display: none}
+
+.rickshaw_graph .detail { background: grey; width: 1px; }
+.rickshaw_graph .detail .x_label { display: none }
+.rickshaw_graph .detail .item { line-height: 1.4; padding: 0.5em }
+.detail_swatch { float: right; display: inline-block; width: 10px; height: 10px; margin: 0 4px 0 0 }
+.rickshaw_graph .detail .date { color: #a0a0a0 }
+
+</style> 
+
+<iframe width='50%' height='100%' frameborder='0' src='http://danhammer.cartodb.com/viz/8bf85998-410e-11e3-85a7-6805ca04cef1/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=false&sublayer_options=1%7C1&sql=&zoom=4&center_lat=30.70265930723801&center_lon=-97.8896484375'></iframe>
+
+<div id="map"></div>
+<div id="chart-container" style = "position: absolute; left: 48%; top: 18%;">
+  <div id="y_axis"></div>
+  <div id="chart"></div>
+</div>
+
+<div id="footer"></div>
+
+<script src="grapher.js"></script>
